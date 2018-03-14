@@ -1,0 +1,15 @@
+#!/bin/bash
+if test -f $1 
+then 
+echo "Вы действительно хотите удалить файл? y/n"
+read ans
+if [ $ans = 'y' ]
+then
+rm $1
+echo "Файл удален" 
+else
+echo "Удаление отменено"
+fi
+else
+echo "Файла не существует"
+fi
